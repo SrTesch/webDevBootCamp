@@ -25,7 +25,7 @@
         </p>
         <p>
             <label for="number">Enter a number:</label> <br>
-            <input type="number" placeholder="Enter a number" id="number" name="number">
+            <input type="number" placeholder="Enter a number" id="number" name="number" min="0" max="100">
         </p>
         <!--This button doesn't submit the form b/c of the "type" attribute -->
         <button type="button">Regular button (won't submit)</button>
@@ -58,14 +58,43 @@
 
         <p>
             <label for="xs">XS:</label>
-            <input type="radio" name="size" id="xs">
+            <input type="radio" name="size" id="xs" value="xs">
             <br>
             <label for="s">S:</label>
-            <input type="radio" name="size" id="s">
+            <input type="radio" name="size" id="s" value="s">
             <br>
             <label for="m">M:</label>
-            <input type="radio" name="size" id="m">
+            <input type="radio" name="size" id="m" value="m">
         </p>
+
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="veg">Vegetarian</option>
+                <option value="steak">Steak</option>
+                <option value="chicken">Chicken</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" name="cheese_level" id="cheese" min="0" max="100" value="75">
+        </p>
+
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea name="Requests?" id="requests" cols="30" rows="10" placeholder="Type something here"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <label for="firstName">Enter First Name</label>
+        <input type="text" name="firstName" required>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" minlength="5" maxlength="20" required>
         <button>Submit</button>
     </form>
 </body>

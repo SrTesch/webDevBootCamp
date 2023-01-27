@@ -29,6 +29,7 @@ body{
     margin: 0 auto;
     background-color: #fd4d3f;
     margin-top: 30px;
+    user-select: none;
   }
   .key{
     width: 30px;
@@ -38,6 +39,8 @@ body{
     box-shadow: 2px 5px;
     background-color: white;
     color: #141c3a;
+    cursor: pointer;
+    user-select: none;
   }
   .black-key{
     width: 25px;
@@ -48,6 +51,8 @@ body{
     position: absolute;
     margin-left: -12px;
     padding: 0px;
+    cursor: pointer;
+    user-select: none;
   }
   .keynote{
     width: 20px;
@@ -57,6 +62,8 @@ body{
     margin: 0 auto;
     margin-top: 175px;
     color: #141c3a;
+    cursor: pointer;
+    user-select: none;
   }
   .black-keynote{
     width: 20px;
@@ -65,6 +72,9 @@ body{
     display: block;
     margin: 0 auto;
     margin-top: 75px;
+    cursor : pointer;
+    user-select: none;
+
   }
   #lyrics{
     width: 400px;

@@ -5,7 +5,6 @@ keys.forEach(function(key){
   notes.push(document.getElementById(key));
 })
 
-// Write named functions that change the color of the keys below
 const keyPlay = event =>{
   event.target.style.backgroundColor = '#6df0c2';
 }
@@ -13,34 +12,34 @@ const keyReturn = event => {
     event.target.style.backgroundColor = '';
 }
 
-// Write a named function with event handler properties
 let eventAssignment = note =>{
     note.onmousedown = () => {
         keyPlay(event);
+        const audio = new Audio('audios/'+note.id + '.mp3');
+        audio.play();
     }
+
     note.onmouseup = () => {
         keyReturn(event);
     }
 }
 
-// Write a loop that runs the array elements through the function
+
+
+
 notes.forEach(eventAssignment);
 
-// These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById('first-next-line');
 let nextTwo = document.getElementById('second-next-line');
 let nextThree = document.getElementById('third-next-line');
 let startOver = document.getElementById('fourth-next-line');
 
-// This variable stores the '-END' lyric element
 let lastLyric = document.getElementById('column-optional');
 
-// These statements are "hiding" all the progress buttons, but the first one
 nextTwo.hidden = true;
 nextThree.hidden = true;
 startOver.hidden= true;
 
-// Write anonymous event handler property and function for the first progress button
 nextOne.onclick = () =>{
   nextTwo.hidden = false;
   nextOne.hidden = true;
@@ -49,7 +48,6 @@ nextOne.onclick = () =>{
   document.getElementById("letter-note-six").innerHTML = 'C'
 }
 
-// Write anonymous event handler property and function for the second progress button
 nextTwo.onclick = () =>{
   nextThree.hidden = false;
   nextTwo.hidden = true;
@@ -66,7 +64,6 @@ nextTwo.onclick = () =>{
   lastLyric.style.display = 'inline-block'
 }
 
-// Write anonymous event handler property and function for the third progress button
 nextThree.onclick = () =>{
   startOver.hidden = false;
   nextThree.hidden = true;
@@ -89,7 +86,6 @@ nextThree.onclick = () =>{
 
 }
 
-// This is the event handler property and function for the startOver button
 startOver.onclick = function() {
   nextOne.hidden = false;
   startOver.hidden = true;

@@ -1,0 +1,50 @@
+form{
+    border: 2px solid lightgrey;
+    border-radius: 0px 8px 8px 8px;
+    padding: .6em;
+}
+
+textarea{
+    resize: none;
+    width: 100%;
+    border: none;
+    color: lightgrey;
+    font-size: .8rem;
+}
+
+textarea:focus{
+    color: black;
+    outline: 0;
+}
+
+button{
+    cursor: pointer;
+    height: 40px;
+    width: 55px;
+    background-color: rgb(65, 114, 131);
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    transition-duration: .3s;
+}
+button:hover{
+    background-color: lig htblue;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+#an{
+    display: flex;
+    align-items: center;
+    color: rgb(53, 52, 52);
+}
+
+#an span{
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+}

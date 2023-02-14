@@ -1,3 +1,6 @@
+console.log("I'm learning about");
+setTimeout(() => { console.log("Event Loop");}, 2000);
+console.log("the");
 console.log("This is the first line of code in app.js.");
 
 const usingSTO = () =>{

@@ -6,3 +6,4 @@ const myDiv = (
         <h1>Eu sou lindo!</h1>
     </div>
 )
+ReactDOM.render(myDiv, document.getElementById('app'));
